@@ -16,12 +16,10 @@ script:
 
 notifications:
   email:
-    - ryan@spreecommerce.com
-  irc: "irc.freenode.org#spree"
+    - joahking@gmail.com
 branches:
   only:
-    - 1-1-stable
-    - master
+    - travis-fixes_1455-drag-and-drops-do-not-go-above-table-headers
 rvm:
   - 1.8.7
   - 1.9.3
