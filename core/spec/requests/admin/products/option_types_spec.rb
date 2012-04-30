@@ -12,10 +12,10 @@ describe "Option Types" do
       Factory(:option_type, :name => "tshirt-size", :presentation => "Size")
 
       click_link "Option Types"
-      find('table#listing_option_types tr:nth-child(2) td:nth-child(1)').text.should == " tshirt-color"
-      find('table#listing_option_types tr:nth-child(2) td:nth-child(2)').text.should == "Color"
-      find('table#listing_option_types tr:nth-child(3) td:nth-child(1)').text.should == " tshirt-size"
-      find('table#listing_option_types tr:nth-child(3) td:nth-child(2)').text.should == "Size"
+      find('table#listing_option_types tbody tr:nth-child(2) td:nth-child(1)').text.should == " tshirt-color"
+      find('table#listing_option_types tbody tr:nth-child(2) td:nth-child(2)').text.should == "Color"
+      find('table#listing_option_types tbody tr:nth-child(3) td:nth-child(1)').text.should == " tshirt-size"
+      find('table#listing_option_types tbody tr:nth-child(3) td:nth-child(2)').text.should == "Size"
     end
   end
 

@@ -16,7 +16,7 @@ describe "Product Images" do
       attach_file('image_attachment', absolute_path)
       click_button "Update"
       page.should have_content("successfully created!")
-      within('table.index tr:nth-child(2)') { click_link "Edit" }
+      within('table.index tbody tr:nth-child(2)') { click_link "Edit" }
       fill_in "image_alt", :with => "ruby on rails t-shirt"
       click_button "Update"
       page.should have_content("successfully updated!")
