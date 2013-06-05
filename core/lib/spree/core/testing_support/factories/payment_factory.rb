@@ -8,7 +8,7 @@ FactoryGirl.define do
     response_code '12345'
 
     # limit the payment amount to order's remaining balance, to avoid over-pay exceptions
-    after_create do |pmt|
+    after(:create) do |pmt|
         #pmt.update_attribute(:amount, [pmt.amount, pmt.order.outstanding_balance].min)
     end
   end
@@ -20,7 +20,7 @@ FactoryGirl.define do
   #   txn_type CreditcardTxn::TxnType::AUTHORIZE
   #
   #   # match the payment amount to the payment's value
-  #   after_create do |txn|
+  #   after(:create) do |txn|
   #     # txn.update_attribute(:amount, [txn.amount, txn.payment.payment].min)
   #     txn.update_attribute(:amount, txn.payment.amount)
   #   end
